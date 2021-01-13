@@ -75,7 +75,7 @@ int main() {
             //   (noiseless control) data.
             double previous_velocity = std::stod(j[1]["previous_velocity"].get<string>());
             double previous_yawrate = std::stod(j[1]["previous_yawrate"].get<string>());
-
+            std::cout << "prediction " <<std::endl;
             pf.prediction(delta_t, sigma_pos, previous_velocity, previous_yawrate);
           }
 
